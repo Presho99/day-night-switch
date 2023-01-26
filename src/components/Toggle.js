@@ -11,7 +11,20 @@ function Toggle() {
             <div className='right' style={{backgroundImage: "url('night.jpeg')"}}></div>
            
         </div>
-        <div className='ball'></div>
+        <motion.div 
+        className='ball'
+        animate = {{
+            x: isAnimating ? 50 : -50,
+            backgroundColor: isAnimating ? "#8c86b8" : "#fefefe"
+        }}
+
+        initial = {{
+            backgroundColor: "#8C86B8"
+        }}
+        onClick = {() => setIsAnimating(!isAnimating)}
+        >
+
+        </motion.div>
     </div>
   )
 }
