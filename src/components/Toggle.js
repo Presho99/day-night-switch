@@ -4,6 +4,15 @@ import { motion } from "framer-motion"
 
 function Toggle() {
     const [isAnimating, setIsAnimating] = useState(false)
+    const [theme, setTheme] = useState('light')
+
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark')
+        }else {
+            setTheme('light')
+        }
+    }
   return (
     <div className='toggle'>
         <div className='ball-container'>
