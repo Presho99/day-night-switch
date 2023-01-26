@@ -50,6 +50,12 @@ function Toggle() {
         initial = {{
             backgroundColor: "#8C86B8"
         }}
+
+        transition = {{
+            type: "spring",
+            stiffness: 50,
+            
+        }}
         onClick = {() => {setIsAnimating(!isAnimating);
         toggleTheme();
         toggleImage()
