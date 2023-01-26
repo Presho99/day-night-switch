@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Switch from './components/Switch';
+import Toggle from './components/Toggle';
 
 function App() {
   return (
     <div className="App">
-      <Switch/>
+      <Toggle/>
       
     </div>
   );
