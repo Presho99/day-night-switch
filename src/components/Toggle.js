@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from "framer-motion"
+import morning from "../assets/morning.jpeg"
+import night from "../assets/night.jpeg"
+
 
 
 function Toggle() {
     const [isAnimating, setIsAnimating] = useState(false)
     const [theme, setTheme] = useState('light')
+    const [isImage, setIsImage] = useState(morning)
 
     const toggleTheme = () => {
         if (theme === 'light') {
@@ -14,21 +18,31 @@ function Toggle() {
         }
     }
 
+    const toggleImage = () => {
+       let value = isImage
+
+       if (value === morning) {
+           setIsImage(night)
+       }else {
+           setIsImage(morning)
+       }
+    }
+
     useEffect(() => {
             document.body.className = theme;
           }, [theme]);
   return (
     <div className={`toggle ${theme}`}>
-        <div className='ball-container'>
-            <div className='left' style={{backgroundImage: "url('morning.jpeg')"}} onClick={toggleTheme}></div>
-            <div className='right' style={{backgroundImage: "url('night.jpeg')"}}></div>
+        <div className= "ball-container" style={{backgroundImage: `url(${isImage})`}}>
+            {/* <div className='left' style={{backgroundImage: "url('morning.jpeg')"}} ></div>
+            <div className='right' style={{backgroundImage: "url('night.jpeg')"}}></div> */}
            
         </div>
         <motion.div 
         className='ball'
         animate = {{
             x: isAnimating ? 50 : -50,
-            backgroundColor: isAnimating ? "#D79D7A" : "#020311",
+            backgroundColor: isAnimating ? "#030514" : "#D79D7A",
             rotate: isAnimating ? 360 : 0
 
         }}
@@ -36,7 +50,10 @@ function Toggle() {
         initial = {{
             backgroundColor: "#8C86B8"
         }}
-        onClick = {() => setIsAnimating(!isAnimating)}
+        onClick = {() => {setIsAnimating(!isAnimating);
+        toggleTheme();
+        toggleImage()
+    }}
         >
 
         </motion.div>
