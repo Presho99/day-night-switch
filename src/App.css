@@ -17,13 +17,13 @@
   height: 100px;
 background-color: blue;
 display: flex;
-border-radius: 40%;
+border-radius: 50px;
 box-shadow: 6px 8px 40px -9px;
 position: relative;
 
 
 }
-.left, .right{
+/* .left, .right{
   
   width: 100px;
   height: 100px;
@@ -43,11 +43,11 @@ position: relative;
 .right{
   border-top-right-radius: 40%;
   border-bottom-right-radius: 40%;
-}
+} */
 
 .ball{
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   
   position: absolute;
   border-radius: 50%;

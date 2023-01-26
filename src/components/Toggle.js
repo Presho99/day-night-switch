@@ -42,7 +42,7 @@ function Toggle() {
         className='ball'
         animate = {{
             x: isAnimating ? 50 : -50,
-            backgroundColor: isAnimating ? "#030514" : "#D79D7A",
+            backgroundColor: isAnimating ? "#030514" : "#B6BD56",
             rotate: isAnimating ? 360 : 0
 
         }}
