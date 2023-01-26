@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { motion } from "framer-motion"
 
 
@@ -13,10 +13,14 @@ function Toggle() {
             setTheme('light')
         }
     }
+
+    useEffect(() => {
+            document.body.className = theme;
+          }, [theme]);
   return (
-    <div className='toggle'>
+    <div className={`toggle ${theme}`}>
         <div className='ball-container'>
-            <div className='left' style={{backgroundImage: "url('morning.jpeg')"}}></div>
+            <div className='left' style={{backgroundImage: "url('morning.jpeg')"}} onClick={toggleTheme}></div>
             <div className='right' style={{backgroundImage: "url('night.jpeg')"}}></div>
            
         </div>
@@ -24,7 +28,7 @@ function Toggle() {
         className='ball'
         animate = {{
             x: isAnimating ? 50 : -50,
-            backgroundColor: isAnimating ? "#D79D7A" : "#6189CB",
+            backgroundColor: isAnimating ? "#D79D7A" : "#020311",
             rotate: isAnimating ? 360 : 0
 
         }}
