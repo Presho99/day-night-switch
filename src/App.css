@@ -3,3 +3,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.toggle{
+  background-color: #8C86B8;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.ball-container{
+  width: 200px;
+  height: 100px;
+background-color: blue;
+display: flex;
+border-radius: 40%;
+box-shadow: 6px 8px 40px -9px;
+position: relative;
+
+
+}
+.left, .right{
+  
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ position: relative; 
+  
+}
+
+.left{
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 40%;
+  ;
+}
+
+.right{
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+
+.ball{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  border-radius: 50%;
+}
+
