@@ -53,7 +53,7 @@ function Toggle() {
 
         transition = {{
             type: "spring",
-            stiffness: 50,
+            stiffness: 40,
             
         }}
         onClick = {() => {setIsAnimating(!isAnimating);
