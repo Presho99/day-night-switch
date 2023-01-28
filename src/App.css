@@ -55,11 +55,14 @@ position: relative;
 
 .dark{
   background-color: #5E8CC2;
+  transition: 0.7s ease-in-out;
 }
 
 .light{
 background-color: #B6BD56;
+transition: 0.7s ease-in-out;
 }
+
 
 /* .morning{
   background-image: url();
