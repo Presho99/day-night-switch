@@ -23,27 +23,6 @@ position: relative;
 transition: 0.7s ease-in-out;
 
 }
-/* .left, .right{
-  
-  width: 100px;
-  height: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- position: relative; 
-  
-}
-
-.left{
-  border-top-left-radius: 40%;
-  border-bottom-left-radius: 40%;
-  ;
-}
-
-.right{
-  border-top-right-radius: 40%;
-  border-bottom-right-radius: 40%;
-} */
 
 .ball{
   height: 90px;
@@ -64,6 +43,3 @@ transition: 0.7s ease-in-out;
 }
 
 
-/* .morning{
-  background-image: url();
-} */

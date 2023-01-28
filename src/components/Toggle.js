@@ -20,7 +20,6 @@ function Toggle() {
 
     const toggleImage = () => {
        let value = isImage
-
        if (value === morning) {
            setIsImage(night)
        }else {
@@ -33,10 +32,7 @@ function Toggle() {
           }, [theme]);
   return (
     <div className={`toggle ${theme}`}>
-        <div className= "ball-container" style={{backgroundImage: `url(${isImage})`}}>
-            {/* <div className='left' style={{backgroundImage: "url('morning.jpeg')"}} ></div>
-            <div className='right' style={{backgroundImage: "url('night.jpeg')"}}></div> */}
-           
+        <div className= "ball-container" style={{backgroundImage: `url(${isImage})`}}>         
         </div>
         <motion.div 
         className='ball'
@@ -44,24 +40,19 @@ function Toggle() {
             x: isAnimating ? 50 : -50,
             backgroundColor: isAnimating ? "#030514" : "#B6BD56",
             rotate: isAnimating ? 360 : 0
-
         }}
-
         initial = {{
             backgroundColor: "#8C86B8"
         }}
-
         transition = {{
             type: "spring",
-            stiffness: 40,
-            
+            stiffness: 40,  
         }}
         onClick = {() => {setIsAnimating(!isAnimating);
         toggleTheme();
         toggleImage()
     }}
-        >
-
+            >
         </motion.div>
     </div>
   )
