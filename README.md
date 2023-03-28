@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+![](https://github.com/Presho99/day-night-switch/blob/master/day-night-switch.gif)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
